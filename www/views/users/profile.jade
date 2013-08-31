@@ -1,0 +1,31 @@
+extends ../layout
+block content
+	#global-container
+		h2 User Profile
+		#profile
+			#userProfile 
+			h1= user.displayName
+			img(src='/images/users/#{user.avatar}', width="200")
+			form(action="/users", method="post", enctype="multipart/form-data")
+				label Upload an Image
+				input(type="file", name="image")
+				input(type="submit", value="Save")
+				h3 #{user.displayName}
+				h3 Email: #{user.email}
+				a(href="./edit") Edit
+			#updateProfile
+				h3.profileTitle Profile Info
+				form
+					ul
+						li
+							lable.control-label Name
+							input(name="userName", type="text", value="#{user.displayName}")
+						li
+							lable.control-label Email
+							input(name="userEmail", type="text", value="#{user.email}")
+						li
+							lable.control-label UserName
+							input(name="userEmail", type="text", value="#{user.email}" )
+						li 
+							button#saveProfile(href="#") Save		
+								

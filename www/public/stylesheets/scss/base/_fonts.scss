@@ -1,0 +1,71 @@
+//
+// base: webfonts.scss
+//
+//
+@import "_variables.scss";
+@import "_mixins.scss";
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, Helvetica, sans-serif;
+	color: $baseColor;
+
+		                  font-size: $fontSizeBase; // 16px
+		@include mq($M) { font-size: getMultiplier(17, $fontSizeBase) + em; } // 17px = 1.0625em
+		@include mq($L) { font-size: getMultiplier(18, $fontSizeBase) + em; } // 18px = 1.125em
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size:   getMultiplier(44, $fontSizeBase) + em;
+	line-height: getMultiplier(51, 2.75); // 44/16
+}
+
+h2 {
+	font-size:   getMultiplier(40, $fontSizeBase) + em;
+	line-height: getMultiplier(45, 2.5); // 40/16
+}
+
+h3 {
+	font-size:   getMultiplier(24, $fontSizeBase) + em;
+	line-height: getMultiplier(30, 1.5); // 24/16
+}
+
+h4 {
+	font-size:   getMultiplier(20, $fontSizeBase) + em;
+	line-height: getMultiplier(24, 1.25); // 20/16
+}
+
+h5 {
+	font-size:   getMultiplier(18, $fontSizeBase) + em;
+	line-height: getMultiplier(21, 1.125); // 18/16
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+
+p {
+	line-height: getMultiplier(20, $fontSizeBase); // 16/16
+	margin: 0;
+	padding: 0 0 $space;
+}
+
+ul, ol, dl {
+	list-style: none;
+	margin: 0 0 0 $space;
+	padding: 0 0 ($space/2);
+}
+
+p  ul, 
+ul ul, 
+ol ul, 
+p  ol, 
+ul ol, 
+ol ol { 
+	padding-bottom: 0;
+}

@@ -1,0 +1,612 @@
+.sprite-sprite {
+  background: url('../../images/sprite-sd16e45f6b8.png') no-repeat;
+}
+
+.sprite-sprite {
+  background: url('../../images/sprite-sd16e45f6b8.png') no-repeat;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, Helvetica, sans-serif;
+  color: #444444;
+  font-size: 1em;
+}
+@media (min-width: 1240px) {
+  body {
+    font-size: getMultiplier(17, 1em)em;
+  }
+}
+@media (min-width: 1800px) {
+  body {
+    font-size: getMultiplier(18, 1em)em;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: getMultiplier(44, 1em)em;
+  line-height: getMultiplier(51, 2.75);
+}
+
+h2 {
+  font-size: getMultiplier(40, 1em)em;
+  line-height: getMultiplier(45, 2.5);
+}
+
+h3 {
+  font-size: getMultiplier(24, 1em)em;
+  line-height: getMultiplier(30, 1.5);
+}
+
+h4 {
+  font-size: getMultiplier(20, 1em)em;
+  line-height: getMultiplier(24, 1.25);
+}
+
+h5 {
+  font-size: getMultiplier(18, 1em)em;
+  line-height: getMultiplier(21, 1.125);
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: getMultiplier(20, 1em);
+  margin: 0;
+  padding: 0 0 1.75em;
+}
+
+ul, ol, dl {
+  list-style: none;
+  margin: 0 0 0 1.75em;
+  padding: 0 0 0.875em;
+}
+
+p ul,
+ul ul,
+ol ul,
+p ol,
+ul ol,
+ol ol {
+  padding-bottom: 0;
+}
+
+@media screen {
+  /* http://meyerweb.com/eric/tools/css/reset/ 
+     v2.0 | 20110126
+     License: none (public domain)
+  */
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+
+  body {
+    line-height: 1;
+  }
+
+  ol, ul {
+    list-style: none;
+  }
+
+  blockquote, q {
+    quotes: none;
+  }
+
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: "";
+    content: none;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  /*
+  Copyright (c) 2010, Yahoo! Inc. All rights reserved.
+  Code licensed under the BSD License:
+  http://developer.yahoo.com/yui/license.html
+  version: 2.8.1
+  */
+  body {
+    font: 13px / 1.231 arial, helvetica, clean, sans-serif;
+    *font-size: small;
+    *font: x-small;
+  }
+
+  select, input, button, textarea, button {
+    font: 99% arial,helvetica,clean,sans-serif;
+  }
+
+  table {
+    font-size: inherit;
+    font: 100%;
+  }
+
+  pre, code, kbd, samp, tt {
+    font-family: monospace;
+    *font-size: 108%;
+    line-height: 100%;
+  }
+
+  /*
+  font sizes
+  px  %
+  10	77
+  11	85
+  12	93
+  13	100
+  14	108
+  15	116
+  16	123.1
+  17	131
+  18	138.5
+  19	146.5
+  20	153.9
+  21	161.6
+  22	167
+  23	174
+  24	182
+  25	189
+  26	197
+  */
+  .rating label {
+    text-decoration: none;
+    color: black;
+    font-style: normal;
+    position: relative;
+    cursor: pointer;
+    font-size: 60px;
+    float: right;
+  }
+
+  .rating input {
+    opacity: 0;
+    position: absolute;
+    left: 0px;
+  }
+
+  .rating:not(:hover) input:checked ~ label:before,
+  .rating label:hover:before,
+  .rating label:hover ~ label:before {
+    position: absolute;
+    content: '\2605';
+    color: #ccc;
+  }
+
+  .rating {
+    unicode-bidi: bidi-override;
+    float: left;
+  }
+
+  body {
+    background: url(../../../images/fabric_of_squares_gray.png);
+    min-width: 960px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+  }
+
+  #login {
+    width: 600px;
+    background: #fff;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+  }
+  #login ul {
+    float: left;
+    margin: 0 auto;
+    width: 250px;
+  }
+  #login ul li {
+    margin: 0 auto 15px auto;
+  }
+  #login #login-buttons li button {
+    height: 44px;
+    border: none;
+    width: 256px;
+    background: url(../../../images/login-btns.png) no-repeat;
+  }
+  #login #login-buttons li.google button {
+    background-position: 0 -258px;
+  }
+  #login #login-buttons li.google button:hover {
+    background-position: 0 -301px;
+  }
+  #login #login-buttons li.google button:active {
+    background-position: 0 -344px;
+  }
+  #login #login-buttons li.twitter button {
+    background-position: 0 -129px;
+  }
+  #login #login-buttons li.twitter button:hover {
+    background-position: 0 -172px;
+  }
+  #login #login-buttons li.twitter button:active {
+    background-position: 0 -215px;
+  }
+  #login #login-buttons li.facebook button {
+    background-position: 0 0;
+  }
+  #login #login-buttons li.facebook button:hover {
+    background-position: 0 -43px;
+  }
+  #login #login-buttons li.facebook button:active {
+    background-position: 0 -86px;
+  }
+  #login #vertical-sep {
+    width: 0;
+    height: 168px;
+    border-left: 1px solid #242424;
+    border-right: 1px solid #646464;
+    float: left;
+    margin: 0 32px 22px 32px;
+  }
+  #login #vertical-sep span {
+    background-color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    padding: .35em .5em .5em .5em;
+    margin-top: -0.5em;
+    width: 2em;
+    height: 1em;
+    display: block;
+    position: relative;
+    top: 50%;
+    left: -1.5em;
+    color: #AAA;
+    font-weight: 400;
+    font-size: 1.1em;
+  }
+  #login #login-creds {
+    width: 250px;
+  }
+  #login #login-creds input {
+    float: left;
+    width: 224px;
+    padding: 10px 12px;
+    font-size: 16px;
+    margin: 0 auto 15px auto;
+  }
+  #login #login-creds button {
+    color: #ffffff;
+    width: 250px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    height: 44px;
+    font-size: 16px;
+    background-color: #006dcc;
+    background-image: -moz-linear-gradient(top, #45cc00 0%, #0044cc 100%);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
+    background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
+    background-image: -o-linear-gradient(top, #0088cc, #0044cc);
+    background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+    background-repeat: repeat-x;
+    border-color: #0044cc #0044cc #002a80;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0044cc', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  }
+  #login #login-creds .pwhelp {
+    float: left;
+  }
+  #login #login-creds .createAccount {
+    float: right;
+  }
+
+  .profileTitle {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  #userProfile {
+    width: 300px;
+    float: left;
+  }
+
+  #updateProfile {
+    width: 500px;
+    float: left;
+  }
+  #updateProfile lable {
+    display: block;
+  }
+  #updateProfile input {
+    width: 100%;
+  }
+
+  #map-canvas {
+    height: 300px;
+    width: 100%;
+    margin-top: 30px;
+    display: block;
+  }
+  #map-canvas #mapTools {
+    width: 100%;
+    display: block;
+    background: #fff;
+    border-bottom: #ccc 1px solid;
+  }
+
+  header.navbar {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1030;
+    margin-bottom: 0;
+    color: #fff;
+    background: black;
+  }
+  header.navbar a {
+    text-decoration: none;
+    color: #999999;
+    padding: 10px 15px 10px;
+    line-height: 30px;
+  }
+  header.navbar .container {
+    width: 940px;
+    margin: 0 auto;
+  }
+  header.navbar .container .logo {
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0 30px 0 0;
+    float: left;
+    width: 500px;
+  }
+  header.navbar .container #userName {
+    float: right;
+    width: 200px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  header.navbar .container #userName:hover span {
+    color: #fff;
+  }
+  header.navbar .container #userName:hover span.user {
+    background-image: url('../../images/sprite-scf00482182.png');
+    background-position: 0 -527px;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+  }
+  header.navbar .container #userName span {
+    color: #999;
+    float: left;
+  }
+  header.navbar .container #userName span.user {
+    line-height: 36px;
+    margin: 6px 5px 0 0;
+    width: 16px;
+    background-image: url('../../images/sprite-scf00482182.png');
+    background-position: 0 -498px;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+  }
+  header.navbar .container #userName ul.active {
+    display: block;
+  }
+  header.navbar .container #userName ul {
+    position: absolute;
+    overflow: hidden;
+    top: 100%;
+    background: #fff;
+    z-index: 1000;
+    display: none;
+    float: left;
+    width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+  }
+  header.navbar .container #userName ul li {
+    display: inline-block;
+    width: 160px;
+  }
+  header.navbar .container #userName ul li:hover {
+    background: #0088cc;
+  }
+  header.navbar .container #userName ul li a {
+    text-align: center;
+  }
+  header.navbar .container nav {
+    position: relative;
+    float: left;
+  }
+  header.navbar .container nav a {
+    padding: 10px 2px 10px;
+  }
+  header.navbar .container nav ul {
+    float: right;
+    width: 200px;
+  }
+  header.navbar .container nav li {
+    display: inline-block;
+    width: 16px;
+    padding: 0 8px 0 8px;
+    line-height: 36px;
+    margin-top: 7px;
+  }
+  header.navbar .container nav li.home {
+    background-image: url('../../images/sprite-scf00482182.png');
+    background-position: 0 -556px;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+  }
+  header.navbar .container nav li.home:hover {
+    background-image: url('../../images/sprite-scf00482182.png');
+    background-position: 0 -585px;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+  }
+  header.navbar .container nav li.feed {
+    background-image: url('../../images/sprite-scf00482182.png');
+    background-position: 0 -353px;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+  }
+  header.navbar .container nav li.feed:hover {
+    background-image: url('../../images/sprite-scf00482182.png');
+    background-position: 0 -382px;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+  }
+  header.navbar .container nav li.mail {
+    background-image: url('../../images/sprite-scf00482182.png');
+    background-position: 0 -324px;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+  }
+  header.navbar .container nav li.mail:hover {
+    background-image: url('../../images/sprite-scf00482182.png');
+    background-position: 0 -411px;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+  }
+  header.navbar .container nav li.arrow {
+    background-image: url('../../images/sprite-scf00482182.png');
+    background-position: 0 -440px;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+  }
+  header.navbar .container nav li.arrow:hover {
+    background-image: url('../../images/sprite-scf00482182.png');
+    background-position: 0 -469px;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+  }
+  header.navbar .container nav li a:hover {
+    color: #fff;
+  }
+  header.navbar .container nav li.dropdown.active ul {
+    display: block;
+  }
+  header.navbar .container nav li.dropdown ul {
+    position: absolute;
+    overflow: hidden;
+    top: 100%;
+    background: #fff;
+    z-index: 1000;
+    display: none;
+    float: left;
+    width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+  }
+  header.navbar .container nav li.dropdown ul li {
+    display: inline-block;
+    width: 160px;
+    padding: 0;
+    margin: 0;
+  }
+  header.navbar .container nav li.dropdown ul li:hover {
+    background: #0088cc;
+  }
+  header.navbar .container nav li.dropdown ul li a {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  #fork-me {
+    background-image: url('../../images/sprite-scf00482182.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    height: 149px;
+    width: 149px;
+    border: 0;
+    display: block;
+    right: 0;
+    position: absolute;
+    text-indent: -9999px;
+    top: 0;
+  }
+  #fork-me:hover {
+    background-position: 0 -162px;
+  }
+}
+#global-container {
+  width: 980px;
+  margin: 100px auto 0 auto;
+  position: relative;
+}

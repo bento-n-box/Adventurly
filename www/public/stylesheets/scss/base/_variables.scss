@@ -1,0 +1,26 @@
+// Set Breakpoints
+$layoutBreakpoint: 1080px;
+$sBreakpoint: 960px;
+$mBreakpoint: 1240px;
+$lBreakpoint: 1800px;
+
+// Build Media Queries
+//   should match enquire.js values
+$layoutMQ: 'min-width:'+ $layoutBreakpoint;
+$S: 'min-width:'+ $sBreakpoint;
+$M: 'min-width:'+ $mBreakpoint;
+$L: 'min-width:'+ $lBreakpoint;
+
+
+// Color Variables
+$baseColor: #444;
+$white: #fff;
+
+// Typography
+$verticalRhythmBase: 16;
+$fontSizeBase: 1em; // Use browser default font-size, usually 16px
+
+
+
+// Spacing
+$space: $fontSizeBase * 1.75;

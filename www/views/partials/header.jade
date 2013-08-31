@@ -1,0 +1,38 @@
+header.navbar
+	.container
+		nav
+			#panel
+				input#target( type="text", placeholder="Search Box", value="Boulder, CO")
+			ul.nav.icons
+				a(href="/")
+					li.home 
+				a(href="/help")
+					li.feed
+				a(href="#")
+					li.mail
+				a(href="#")
+					li.dropdown.arrow
+						a(href="#")
+						ul.dropdown-menu
+							li 
+								a(href="/profile") Profile
+							li 
+								a(href="./account/edit") Edit
+							li 
+								a(href="/logout") Signout
+		h1.logo #{title}
+		#userName.dropdown
+				span.user
+				- if(user)
+					span.userName #{user.displayName}
+					ul.dropdown-menu
+						li 
+							a(href="users/#{user._id}") Profile
+						li 
+							a(href="#") Edit
+						li 
+							a(href="/logout") Signout
+				- else
+					span 
+						a(href="/login") SignIn
+								
