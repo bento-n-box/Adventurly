@@ -2,9 +2,8 @@
  * @module view/MapView
  */
 
-define(['jquery','underscore','backbone', 'async!http://maps.google.com/maps/api/js?sensor=false&libraries=places'], function ($, _, Backbone) {
+define(['jquery','underscore','backbone', 'async!http://maps.google.com/maps/api/js?v=3.exp&sensor=false&libraries=places'], function ($, _, Backbone) {
 	'use strict';
-//https://maps.googleapis.com/maps/api/js?key=AIzaSyDQRAokmFxQL48rxIEul5sGcQcEhNdUoA4&sensor=true
 	return Backbone.View.extend({
 
 		"events": {},
@@ -34,12 +33,19 @@ define(['jquery','underscore','backbone', 'async!http://maps.google.com/maps/api
                     style: google.maps.NavigationControlStyle.SMALL
                 }
             });
-           
-             
+            var pyrmont = new google.maps.LatLng(-33.8665433, 151.1956316);
+            var request = {
+			    location: pyrmont,
+			    radius: 500,
+			    types: ['store']
+			  };
+			var	infowindow = new google.maps.InfoWindow();
+			var service = new google.maps.places.PlacesService(map);
+			service.nearbySearch(request, view.placesResults);
 
             google.maps.event.addListener(view.searchBox, 'places_changed', view.placesChanged);
-
-             google.maps.event.addListener(map, 'bounds_changed', view.mapMove);
+            google.maps.event.addListener(map, 'bounds_changed', view.mapMove);
+            
             window.map = map;
             	
 		},
@@ -51,15 +57,24 @@ define(['jquery','underscore','backbone', 'async!http://maps.google.com/maps/api
 			console.log('mapMove')
 			var bounds = map.getBounds();
 		},
+		"placesResults": function () {
+			console.log('placesResults')
+			 if (status == google.maps.places.PlacesServiceStatus.OK) {
+			    for (var i = 0; i < results.length; i++) {
+			      createMarker(results[i]);
+			      console.log(results[i])
+			    }
+			  }
+		},
 		"placesChanged": function () {
 			var view = this;
 			var markers = [];
-			 var places = view.searchBox.getPlaces();
+			var places = view.searchBox.getPlaces();
 
 		    for (var i = 0, marker; marker = markers[i]; i++) {
+		    	console.log(markers[i])
 		      marker.setMap(null);
 		    }
-		    console.log(marker)
 		    markers = [];
 		    var bounds = new google.maps.LatLngBounds();
 		    for (var i = 0, place; place = places[i]; i++) {
@@ -76,10 +91,8 @@ define(['jquery','underscore','backbone', 'async!http://maps.google.com/maps/api
 		        title: place.name,
 		        position: place.geometry.location
 		      });
-		      console.log(places[i])
 
 		      markers.push(marker);
-
 		      bounds.extend(place.geometry.location);
 		    }
 
