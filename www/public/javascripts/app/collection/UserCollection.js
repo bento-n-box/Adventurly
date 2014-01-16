@@ -1,20 +1,25 @@
-/**
+		/**
  * @module collection/ExampleCollection
  */
 
-define(['backbone', 'model/UserModel'], function (Backbone) {
+define(['backbone', 'model/UserModel'], function (Backbone, UserModel) {
 
 	'use strict';
 
 	return Backbone.Collection.extend({
 
-		"initialize": function () {
+	    model: UserModel,
 
-			this.model = User;
+	    url: "/listAll",
 
-			log('Backbone : UserCollection : Initialized');
+	    idAttribute: "_id",
 
-		}
+	    parse: function(response){
+	    	var users = response.users;
+	    	return {users: users};
+	    }
+
+	    
 
 	});
 

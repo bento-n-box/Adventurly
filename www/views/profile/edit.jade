@@ -1,0 +1,19 @@
+extends ../layout
+block content
+	#global-container
+		h2 User Profile
+		#profile
+				form
+					ul
+						li
+							lable.control-label #{user.displayName}
+							input(name="userName", type="text", value="#{user.displayName}")
+						li
+							lable.control-label Email
+							input(name="userEmail", type="text", value="#{user.email}")
+						li
+							lable.control-label UserName
+							input(name="userEmail", type="text", value="#{user.email}" )
+						li 
+							button#saveProfile(href="#") Save		
+								

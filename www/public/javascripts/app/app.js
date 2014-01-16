@@ -12,17 +12,19 @@ define([
 		'helpers/analytics',
 		'helpers/utilities',
 		'settings',
+		'collection/UserCollection',
 		'model/AppConfig',
+		'model/UserModel',
 		'router/AppRouter',
-		'view/ExampleView',
 		'view/userlistView',
+		'view/userView',
 		'view/MapView'
 	], // end dependencies
-	function ($, _, Modernizr, Backbone, Swig, Events, Analytics, Utilities, settings, AppConfig, AppRouter, ExampleView, userListView, MapView) {
+	function ($, _, Modernizr, Backbone, Swig, Events, Analytics, Utilities, settings, UserCollection, AppConfig, UserModel, AppRouter, userListView, userView, MapView) {
 
 	'use strict';
 
-	var App = {
+	 window.App = {
 
 		"config": new AppConfig(settings),
 
@@ -39,6 +41,7 @@ define([
 		 */
 		"initialize": function () {
 			Utilities.initialize();
+
 			Analytics.initialize({
 				"gaAccountId": App.config.get('gaAccountId'),
 				"trackingMap": App.trackingMap
@@ -47,14 +50,18 @@ define([
 			App.bindCustomEvents();
 
 			App.cache.routers.appRouter = new AppRouter();
-			Backbone.history.start();
-
-			App.cache.views.userListView = new userListView({
-				"el": "#userList"
-			});
-			App.cache.views.mapView = new MapView({
-				"el": "#map-canvas"
-			});
+			Backbone.history.start({ pushState: true });
+			
+			
+		
+			// App.cache.views.userListView = new userListView();
+			// App.cache.models.userModel = new UserModel({})
+			// App.cache.collections.UserCollection = new UserCollection({})
+			
+		 //    go here first: https://developers.google.com/maps/documentation/javascript/tutorial#api_key
+			// App.cache.views.mapView = new MapView({
+			// 	"el": "#map-canvas"
+			// });
 
 			log('App : Initialized');
 			

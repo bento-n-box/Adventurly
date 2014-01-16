@@ -2,7 +2,7 @@
  * @module view/SubView
  */
 
-define(['underscore', 'backbone', 'swig', 'plugins/text!template/ExampleTemplate.html'], function (_, Backbone, swig, ExampleTemplate) {
+define(['underscore', 'backbone', 'swig'], function (_, Backbone, swig) {
 
 	'use strict';
 
@@ -25,11 +25,6 @@ define(['underscore', 'backbone', 'swig', 'plugins/text!template/ExampleTemplate
 
 		"render": function () {
 			var view = this;
-
-			view.exampleTemplate = swig.compile(ExampleTemplate);
-			view.$el.append(view.exampleTemplate({
-				"url": "https://github.com/cpbtechnology/US-boilerplate-backbonejs"
-			}));
 		},
 		'saveProfile': function (e) {
 			

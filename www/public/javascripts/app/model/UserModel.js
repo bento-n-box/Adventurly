@@ -6,23 +6,17 @@ define(['backbone'], function (Backbone) {
 
 	'use strict';
 
-	return Backbone.Model.extend({
-		urlRoot: '/users',
-		
+	var UserModel = Backbone.Model.extend({
+    	
+    	idAttribute: "_id",	
+  		
+  		url: "/listAll",
 
-		"defaults": {
-				_id: null,
-			    name: "",
-			    sport: "Cast-Fishing",
-			    description: "",
-			    picture: null,
-		},
-
-		"initialize": function () {
-			
-			
-		}
-
+  		"initialize": function (options) {
+  			console.log('called');
+  		}
 	});
+
+	return UserModel;
 
 });

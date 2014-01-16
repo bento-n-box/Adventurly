@@ -16,18 +16,10 @@ html(lang="en")
 		block headLinks			
 			link(rel='shortcut icon', href='images/favicon.ico')
 			link(rel='stylesheet', href='/stylesheets/generated/app.css')
-		block headScripts
-			script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
-			script(src='/javascripts/lib/require.js', data-main='/javascripts/app/main')
-			script
-				console.log('footer');
-				define('settings', {
-					'gaAccountId': 'GA_ACCOUNT_ID_HERE',
-					'fbAccountId': 'FB_ACCOUNT_ID_HERE'
-				});
 	body
 		include partials/header
 		block content
+	include footer
 
 		
 			

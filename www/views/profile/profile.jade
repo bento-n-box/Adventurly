@@ -1,0 +1,35 @@
+extends ../layout
+block content
+	#global-container
+		h2 User Profile
+		#profile
+			#userProfile 
+			h1= user.displayName
+				-if(user.avatar)
+					img(src='#{user.avatar}', width="200")
+				-else
+					img(src='http://placekitten.com/g/200/300', width="200")
+			h3 #{user.displayName}
+			h3 #{user.accountType}
+			h3 Email: #{user.email}
+			script(type="text/template", id="user-detail-template")
+				h3 #{user.displayName}<%= title %>
+				h3 #{user.accountType}
+				h3 Email: #{user.email}
+			a(href="./edit") Edit
+			#updateProfile
+				h3.profileTitle Profile Info
+				form(action="/profile/#{user.id}", method="POST")
+					ul
+						li
+							lable.control-label Name
+							input(name="userName", type="text", value="#{user.displayName}")
+						li
+							lable.control-label Email
+							input(name="userEmail", type="text", value="#{user.email}")
+						li
+							lable.control-label UserName
+							input(name="userEmail", type="text", value="#{user.email}" )
+						li 
+							input#saveProfile(value="Submit", type="Submit")		
+								

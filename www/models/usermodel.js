@@ -7,9 +7,10 @@ var mongoose =require('mongoose'),
 			username: String,
 			givenName: String
 		},
-		logins:{type: Number, default:0},
+		logins:{type: Number, default: 0 },
 		image: String,
-		avatar: String
+		avatar: String,
+		accountType: String
 	}),
 
 UserModel = mongoose.model('user', UserSchema); // user is the mongo collection name

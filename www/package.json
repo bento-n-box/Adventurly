@@ -15,6 +15,6 @@
     "passport-google": "*",
     "passport-twitter": "*",
     "passport-facebook": "*",
-    "passport-http-bearer": "*"
+    "passport-local": "*"
   }
 }
