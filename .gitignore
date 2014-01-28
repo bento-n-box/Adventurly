@@ -1,1 +1,2 @@
-www/node_module/*
+node_modules/*
+www/node_modules/*
